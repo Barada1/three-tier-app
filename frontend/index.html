@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Three Tier App</title>
+</head>
+<body>
+<h1>Welcome DevOps Project</h1>
+
+<button onclick="loadData()">Get Users</button>
+
+<p id="result"></p>
+
+<script>
+function loadData() {
+fetch("http://localhost:8080/users")
+.then(res => res.text())
+.then(data => {
+document.getElementById("result").innerHTML = data;
+});
+}
+</script>
+
+</body>
+</html>
