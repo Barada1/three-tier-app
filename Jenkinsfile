@@ -4,8 +4,7 @@ pipeline {
     stages {
       stage ("Clone"){
         steps {
-          git "https://github.com/Barada1/three-tier-app.git"
-
+          git branch: 'main', url: 'https://github.com/Barada1/three-tier-app.git'
         }
       }  
       
